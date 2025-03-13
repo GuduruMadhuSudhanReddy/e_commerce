@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Order Placed{% endblock title %}
+
+{% block content %}
+<div class="container text-center">
+    <h1>Thank You for Your Order!</h1>
+    {% if order %}
+        <p>Your Order ID is: <b>{{ order.id }}</b></p>
+        <p>Total Amount: <b>Rs. {{ order.total_amount }}</b></p>
+        {% if order.qr_code %}
+            <h2>Scan to Pay</h2>
+            <img src="{{ order.qr_code.url }}" alt="QR Code for Payment" class="img-fluid">
+            <p>Use the above QR code to complete your payment via UPI.</p>
+        {% else %}
+            <p>QR Code not available.</p>
+        {% endif %}
+    {% else %}
+        <p>Order details are not available.</p>
+    {% endif %}
+    <a href="/" class="btn btn-primary">Go to Home</a>
+</div>
+
+{% endblock content %}

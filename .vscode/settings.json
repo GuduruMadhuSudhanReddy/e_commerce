@@ -1,0 +1,15 @@
+{
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "html.customData": [
+        ""
+    ],
+    "html.autoClosingTags": true,
+    "emmet.preferences": {
+        
+    },
+    "emmet.useInlineCompletions": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
